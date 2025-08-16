@@ -44,6 +44,18 @@ services:
         networks:
             - common
 
+    typesense:
+        image: typesense/typesense:28.0
+        container_name: luna_typesense
+        restart: unless-stopped
+        volumes:
+            - ./docker/typesense/data:/data
+        ports:
+            - 8108:8108
+        command: '--data-dir /data --api-key=xyz --enable-cors'
+        networks:
+            - common
+
 networks:
     common:
         external: true
