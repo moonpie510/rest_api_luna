@@ -12,7 +12,7 @@
 - Клонируем репозиторий `git clone git@github.com:moonpie510/rest_api_luna.git`
 - Переходим в папку с проектом и создаем .env на основе .env.example
 - Запускаем докер `docker compose up -d --build`
-- Заходим в контейнер `docker exec -it lunat_php-fpm bash`
+- Заходим в контейнер `docker exec -it luna_php-fpm bash`
 - Запускаем `npm i`
 - Запускаем `composer install`
 - `php artisan storage:link`
