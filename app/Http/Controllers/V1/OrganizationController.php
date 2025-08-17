@@ -10,6 +10,7 @@ use App\Services\BuildingService;
 use App\Services\OrganizationService;
 use Illuminate\Http\JsonResponse;
 
+
 class OrganizationController extends Controller
 {
     public function __construct(

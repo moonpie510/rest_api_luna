@@ -9,5 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    dd(Building::query()->inRandomOrder()->value('id'));
+    dd(config('app.api_key'));
 });

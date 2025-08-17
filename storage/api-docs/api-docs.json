@@ -1,0 +1,397 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Organizations",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/v1/{token}/organizations/building/{building_id}": {
+            "get": {
+                "tags": [
+                    "Organizations"
+                ],
+                "summary": "Получить организации по ID здания",
+                "description": "Возвращает список организаций, связанных с конкретным зданием.",
+                "operationId": "f3cc7df0d288de38a6a51dbede8f1b14",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": "По умолчания - aboba",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "building_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Запрос прошел успешно"
+                                        },
+                                        "data": {
+                                            "type": "string",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/{token}/organizations/activity/{activity_id}": {
+            "get": {
+                "tags": [
+                    "Organizations"
+                ],
+                "summary": "Получить организации по ID активности",
+                "description": "Возвращает список организаций, связанных с конкретной активностью.",
+                "operationId": "31531da44383c9d1e9b5efd497774ee8",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": "По умолчания - aboba",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "activity_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Запрос прошел успешно"
+                                        },
+                                        "data": {
+                                            "type": "string",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/{token}/organizations/{organization_id}": {
+            "get": {
+                "tags": [
+                    "Organizations"
+                ],
+                "summary": "Получить информацию об организации по её ID",
+                "description": "Возвращает данные конкретной организации.",
+                "operationId": "4c61f09f25c76c25f2bce3804935f7f4",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": "По умолчания - aboba",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "organization_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Запрос прошел успешно"
+                                        },
+                                        "data": {
+                                            "type": "string",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/{token}/organizations/activity/{activity_id}/recursive": {
+            "get": {
+                "tags": [
+                    "Organizations"
+                ],
+                "summary": "Получить организации по ID активности (учитывает вложенность)",
+                "description": "Возвращает список организаций, связанных с конкретной активностью (учитывает вложенность).",
+                "operationId": "232baeeaf8e08c9f483586c2e492f74b",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": "По умолчания - aboba",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "activity_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Запрос прошел успешно"
+                                        },
+                                        "data": {
+                                            "type": "string",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/{token}/organizations/search/{text}": {
+            "get": {
+                "tags": [
+                    "Organizations"
+                ],
+                "summary": "Поиск организаций по названию",
+                "description": "Ищет организации по названию",
+                "operationId": "423b630723c13a9ffa68410cc2ebad49",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": "По умолчания - aboba",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Запрос прошел успешно"
+                                        },
+                                        "data": {
+                                            "type": "string",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/{token}/organizations/coordinates": {
+            "get": {
+                "tags": [
+                    "Organizations"
+                ],
+                "summary": "Получить организации по координатам",
+                "description": "озвращает список организаций, находящихся в пределах указанных координат.",
+                "operationId": "1f846e96ccfc82818ce3ba8f6d9790b2",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": "По умолчания - aboba",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lat_min",
+                        "in": "query",
+                        "description": "Минимальная широта",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "lat_max",
+                        "in": "query",
+                        "description": "Максимальная широта",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "lng_min",
+                        "in": "query",
+                        "description": "Минимальная долгота",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "lng_max",
+                        "in": "query",
+                        "description": "Максимальная долгота",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "code": {
+                                            "type": "integer",
+                                            "example": 200
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Запрос прошел успешно"
+                                        },
+                                        "data": {
+                                            "type": "string",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Organizations",
+            "description": "Organizations"
+        }
+    ]
+}
